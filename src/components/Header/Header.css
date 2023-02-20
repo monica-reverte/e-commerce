@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Passion+One&display=swap');
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+} */
+
+:root{
+    --mainColor: #fce6ef;
+    --mainColorLight:#a69da1;
+    --secondaryColor: white;
+    --textColor: #484848;
+}
+
+div .miniheader{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    margin: 0.5rem 2rem;
+    padding: 0.8rem;
+}
+
+
+
+.header-btn{
+    border: none;
+    background-color:var(--mainColor);
+    color:var(--textColor);
+}
+
+p{
+    font-size: 0.7rem;
+}
+span{
+    font-weight: bold;
+}
+
+
+
+
+@media only screen and (max-width:1024px) {
+
+
+    p{
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width:600px){
+
+    div .miniheader{
+        display:none;
+    }
+
+
+}

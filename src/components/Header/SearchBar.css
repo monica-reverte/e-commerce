@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Passion+One&display=swap');
+
+:root{
+    --mainColor: #fce6ef;
+    --mainColorLight:#a69da1;
+    --secondaryColor: white;
+    --textColor: #484848;
+}
+
+div .searchbar_nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--secondaryColor);
+    border: 0.2rem solid #fce6ef;
+    color: var(--textColor);
+    margin: 0.5rem 2rem;
+    padding: 0.8rem;
+}
+
+div .div_logo{
+    width: 50%;
+}
+
+.logo{
+    width: 15rem;
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.search{
+    width: 40%;
+    display: flex;
+    color:var(--textColor);
+}
+
+input {
+    border-radius: 1rem;
+    
+}
+
+
+div .div_cart{
+    width:30%;
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+
+}
+
+.cart-btn{
+    
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    color:var(--textColor);
+    font-size: 1.3rem;
+    margin: 1rem;
+
+}
+
+.div_cart span{
+    position:absolute;
+    top: -0.7rem;
+    font-size: 0.9rem;
+    border: 0.1rem solid red;
+    border-radius:60%;
+    color: white;
+    background-color: red;
+}
+
+p{
+    font-size: 0.7rem;
+}
+
+
+
+
+
+@media only screen and (max-width:1024px) {
+
+    p{
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width:600px) {
+
+    .logo{
+        width:8rem;
+    }
+
+    .search{
+        display: none;
+        
+    }
+    
+    p{
+        font-size: 0.7rem;
+    }
+}

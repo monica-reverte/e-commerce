@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Passion+One&display=swap');
+
+:root{
+    --mainColor: #fce6ef;
+    --mainColorLight:#a69da1;
+    --secondaryColor: white;
+    --textColor: #484848;
+    --otherColor: #74a580;
+
+}
+
+.title{
+    font-size: 2rem;
+    padding: 10rem 0 0 0;
+    color: var(--mainColorLight);
+    margin: 0 2rem;
+}
+
+.products{
+    margin: 0 2rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 3rem 2rem;
+    box-sizing: border-box;
+    padding: 5rem 0;
+}
+
+.product{
+    display:flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 10px 10px 2px var(--mainColor);
+    border: 0.1rem solid var(--mainColor);
+    border-radius: 5px;
+}
+
+.product_img img{
+    width: 15rem;
+}
+
+.product_info{
+    padding: 1rem;
+}
+
+.product_info h1{
+    font-weight: 600;
+    font-size: 1.5rem;
+    color:var(--textColor);
+    
+}
+
+.product_info p{
+    font-weight:bold;
+    color:var(--otherColor);
+    font-size: 2rem;
+}
+
+.product-btn{
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1rem;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+}
+
+.product-btn p{
+    border: 1px solid var(--textColor);
+    max-width: 250px;
+    width: 100%;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.btn-add{
+    background-color: var(--otherColor);
+    max-width: 250px;
+    width: 100%;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    color: var(--textColor);
+    font-weight:600;
+    border: 1px solid var(--textColor);
+    cursor:pointer;
+}
+
