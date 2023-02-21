@@ -13,10 +13,10 @@ export const NavBar = () => {
     <header className='navBar'>
         <nav ref={navRef}>
                 <a href="/#"><FaHome /></a>
-                <a href="/#">Material Montessori</a>
-                <a href="/#">Educativos</a>
-                <a href="/#">Juguetes</a>
-                <a href="/#">Libros</a>
+                <a href="/#">Montessori Material</a>
+                <a href="/#">Educational</a>
+                <a href="/#">Toys</a>
+                <a href="/#">Books</a>
             <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                 <FaTimes />
             </button>

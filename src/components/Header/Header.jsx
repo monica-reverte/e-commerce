@@ -14,7 +14,7 @@ export const Header = () => {
             <FaInstagram />
         </button>
         </div>
-        <p><span>Envíos gratis</span> a partir de 80€ en Península </p>        
+        <p><span>Free shipping</span> from 80€ in the Peninsula </p>        
 </div>
   )
 }

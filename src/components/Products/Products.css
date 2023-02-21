@@ -68,8 +68,6 @@
 
 .product-btn p{
     border: 1px solid var(--textColor);
-    max-width: 250px;
-    width: 100%;
     margin: 0 1rem;
     font-size: 1.5rem;
     text-align: center;
@@ -77,8 +75,6 @@
 
 .btn-add{
     background-color: var(--otherColor);
-    max-width: 250px;
-    width: 100%;
     margin: 0 1rem;
     font-size: 1.5rem;
     color: var(--textColor);
@@ -87,3 +83,14 @@
     cursor:pointer;
 }
 
+@media only screen and (max-width:1024px) {
+
+    .btn-add{
+        font-size: 1rem;    
+    }
+
+    .product-btn p{
+        font-size: 1rem;   
+    }
+
+}

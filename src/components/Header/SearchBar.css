@@ -36,8 +36,8 @@ div .div_logo{
 }
 
 input {
-    border-radius: 1rem;
-    
+    width: 100%;
+    color:var(--textColor);  
 }
 
 
