@@ -36,7 +36,7 @@ export const Products = () => {
         },
         {
             name: "Montessori Ball",
-            price: "17.49 €",
+            price: "17,49 €",
             url: "https://montessoriparatodos.es/11315-thickbox_default/pelota-montessori.jpg",
             id: 6,
         },

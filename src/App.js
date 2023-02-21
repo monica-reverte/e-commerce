@@ -3,7 +3,8 @@ import './App.css';
 import { Header } from "./components/Header";
 import { SearchBar } from "./components/Header";
 import { NavBar } from "./components/Header";
-import { Products } from "./data/Products"
+import { Banner } from "./components/Header";
+import { Products } from "./data/Products";
 import { Footer } from "./components/footer";
 
 
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <SearchBar />
       <NavBar />
+      <Banner />
       <Products />
       <Footer />
 

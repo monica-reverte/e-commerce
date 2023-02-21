@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './Products.css';
+import { Counter } from "./Counter";
 
 
 export const ProductsList = (props) => {
@@ -16,10 +17,7 @@ export const ProductsList = (props) => {
           <p>{props.price}</p>
         </div>
         <div className='product-btn'>
-          <p>0</p>
-          <button className='btn-add'>
-            Add to cart
-          </button>
+          <Counter />
         </div>
       </div>
     
