@@ -7,7 +7,6 @@ export const Counter = ({ initialValue = 0 }) => {
 
     const increaseValue = () => {
     setCounter((prevState) => prevState + 1);
-    setCounter((prevState) => prevState + 1);
 };
 
     const substractValue = () => {

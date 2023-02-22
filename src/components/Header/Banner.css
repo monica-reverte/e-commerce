@@ -10,3 +10,31 @@ div .banner{
     width: 80rem;
     opacity: 80%;
 }
+
+
+@media only screen and (max-width:1024px) {
+
+    div .banner{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem;
+        padding: 0.8rem;
+    }
+    
+    .banner_img{
+        width: 80rem;
+        opacity: 80%;
+    }
+}
+
+@media only screen and (max-width:600px){
+
+    div .banner{
+        display:none;
+        
+    }
+    
+
+
+}
