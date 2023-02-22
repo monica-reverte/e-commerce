@@ -2,6 +2,7 @@ import React from 'react';
 import { useRef } from "react";
 import { FaBars, FaHome, FaTimes } from "react-icons/fa";
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
 
@@ -12,7 +13,7 @@ export const NavBar = () => {
     return (
     <header className='navBar'>
         <nav ref={navRef}>
-                <a href="/#"><FaHome /></a>
+                <Link to={'/'}><FaHome /></Link>
                 <a href="/#">Montessori Material</a>
                 <a href="/#">Educational</a>
                 <a href="/#">Toys</a>

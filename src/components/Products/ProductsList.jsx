@@ -18,6 +18,7 @@ export const ProductsList = (props) => {
         </div>
         <div className='product-btn'>
           <Counter />
+          <button className='add-cart'>Add to cart</button>
         </div>
       </div>
     

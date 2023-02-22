@@ -2,6 +2,7 @@ import * as React from 'react';
 import logo from '../../assets/logo/logo.jpg';
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import './SearchBar.css';
+import { Link } from 'react-router-dom';
 
 export const SearchBar = () => {
 
@@ -15,10 +16,10 @@ return (
             <input type="search" />
         </div>
         <div className='div_cart'>
-            <button className="cart-btn">
-                <FaShoppingCart />
+            <Link to={'/cart'} className="cart-btn">
+            <FaShoppingCart />
                 <span className='item_total'>0</span>    
-            </button>
+            </Link>
             
         </div>     
     </div>
