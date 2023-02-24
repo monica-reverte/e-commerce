@@ -7,7 +7,7 @@ div .banner{
 }
 
 .banner_img{
-    width: 80rem;
+    width: 80%;
     opacity: 80%;
 }
 
@@ -15,7 +15,7 @@ div .banner{
 @media only screen and (max-width:1024px) {
 
     div .banner{
-        display:flex;
+        display:none;
         align-items: center;
         justify-content: center;
         margin: 2rem;
@@ -26,15 +26,4 @@ div .banner{
         width: 80rem;
         opacity: 80%;
     }
-}
-
-@media only screen and (max-width:600px){
-
-    div .banner{
-        display:none;
-        
-    }
-    
-
-
 }

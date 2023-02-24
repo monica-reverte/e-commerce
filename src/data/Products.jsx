@@ -81,10 +81,11 @@ export const Products = () => {
 
 return (
     <div className="products">
-        {products.map((product) => {
+        {products.map((product, index) => {
         return (
             <ProductsList
-            key={product.id}
+            key={index}
+            id={product.id}
             name={product.name}
             url={product.url}
             price={product.price}

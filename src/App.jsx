@@ -1,8 +1,9 @@
-import * as React from 'react';
+
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from './Pages/Home/Home';
 import { Cart } from './Pages/Cart/Cart';
+import CartContextProvider from './context/cartContext';
 
 
 
@@ -12,8 +13,11 @@ function App() {
 
 
 
-  return (
 
+
+
+  return (
+    <CartContextProvider>
     <BrowserRouter>
       <Routes>
           <Route path='/' element={<Home />} />
@@ -21,6 +25,7 @@ function App() {
       </Routes>
       
     </BrowserRouter>
+    </CartContextProvider>
 
   );
 }
