@@ -1,23 +1,29 @@
-import { useContext, useEffect } from 'react';
-import { CartQuantityContext } from '../../context/cartContext';
+import { useEffect } from 'react';
+import { useCart } from '../../context/cartContext';
 import logo from '../../assets/logo/logo.jpg';
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import './SearchBar.css';
 import { Link } from 'react-router-dom';
 
 
-
-
 export const SearchBar = () => {
 
-    const [cartContext, setCartContext] = useContext(CartQuantityContext);
-
-
+    const {cartContext, setCartContext} = useCart()
 
     useEffect(() => {
         const cart = JSON.parse(window.localStorage.getItem("cart"))
-        console.log(cart);
-        setCartContext(cart.reduce((acumulator,item)=>acumulator+item.quantity,0));
+        const cartArr = (cart.map(item => {
+            return item.quantity
+        }))
+
+    let total = 0;
+
+    cartArr.forEach(item =>
+        total += item)
+
+    setCartContext(total);
+        
+
 },[cartContext]);
 
 

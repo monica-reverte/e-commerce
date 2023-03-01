@@ -1,14 +1,14 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import "./Counter.css";
-import addToCart from '../../utils/utils';
-import { CartQuantityContext } from "../../context/cartContext";
+
+import { useCart } from '../../context/cartContext';
 
 
 
 export const Counter = ({ initialValue = 0 , id}) => {
 
     const [counter, setCounter] = useState(initialValue);
-    const [cartContext, setCartContext] = useContext(CartQuantityContext);
+    const {setCartContext, addToCart} = useCart()
 
     const increaseValue = () => {
     setCounter((prevState) => prevState + 1);
