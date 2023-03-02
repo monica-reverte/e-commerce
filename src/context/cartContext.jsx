@@ -10,12 +10,16 @@ function CartContextProvider({children}) {
     const [cartContext, setCartContext] = useState(0);
 
     
-function addToCart (id, counter) {
+function addToCart (id, counter, name, price, url) {
 
 
     const product = [{
         id:id,
-        quantity:counter
+        quantity:counter,
+        name: name,
+        price: price,
+        url: url
+
     }]
 
     const items = localStorage.getItem("cart");
@@ -40,3 +44,4 @@ function addToCart (id, counter) {
 }
 
 export default CartContextProvider;
+

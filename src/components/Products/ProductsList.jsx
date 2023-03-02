@@ -17,7 +17,8 @@ export const ProductsList = (props) => {
           <p>{props.price}</p>
         </div>
         <div className='product-btn'>
-          <Counter id={props.id}/>
+          <Counter id={props.id} url={props.url} name={props.name} price={props.price} />
+          
         </div>
       </div>
     

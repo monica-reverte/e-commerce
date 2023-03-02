@@ -1,4 +1,5 @@
-// import { useContext, useEffect } from 'react';
+import { useEffect } from 'react'
+import { useCart } from "../../context/cartContext";
 import { FaTrashAlt }  from "react-icons/fa";
 import './ShoppingCart.css';
 
@@ -7,16 +8,23 @@ import './ShoppingCart.css';
 
 export const ShoppingCart = () => {
 
-  // const [cartContext, setCartContext] = useContext(null)
-  // const value = useContext(CartContextProvider);
+  const {cartContext} = useCart()
 
-  // const getData = () =>{
-  //     return localStorage.getItem("cart");
-  // }
+    useEffect(() => {
+        const cart = JSON.parse(window.localStorage.getItem("cart"))
+        const cartArr = (cart.map(item => {
+          return item}))
+        
 
-  // useEffect(() => {
-  //     setCartContext(getData());
-  // })
+          cartArr.forEach(item => 
+          console.log(item))
+
+          
+      
+
+},[cartContext]);
+
+
 
   return (
     <div className="shopping-cart">
@@ -27,11 +35,11 @@ export const ShoppingCart = () => {
             <div className="cart-item">
               <img  alt=""/>
               <div>
-                <h1>name</h1>
+                <h1>{cartContext}</h1>
                 <p>price</p> 
               </div>
               <div>
-                <p className='quantity'>1</p>
+                <p className='quantity'>l</p>
               </div>
               <div className='remove-item'>
                 <FaTrashAlt />
