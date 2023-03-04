@@ -8,7 +8,8 @@ import { useCart } from '../../context/cartContext';
 export const Counter = ({ initialValue = 0 , id, name, price, url}) => {
 
     const [counter, setCounter] = useState(initialValue);
-    const {setCartContext, addToCart} = useCart()
+    const {setCartContext, addToCart} = useCart();
+    
 
     const increaseValue = () => {
     setCounter((prevState) => prevState + 1);
@@ -25,7 +26,7 @@ export const Counter = ({ initialValue = 0 , id, name, price, url}) => {
         addToCart(id, counter, name, price, url)
         setCounter(0);
         setCartContext(prevState => prevState + 1)
-    
+        
     }
     
     

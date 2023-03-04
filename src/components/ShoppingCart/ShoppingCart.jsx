@@ -1,50 +1,52 @@
-import { useEffect } from 'react'
-import { useCart } from "../../context/cartContext";
+// import { useCart } from "../../context/cartContext";
 import { FaTrashAlt }  from "react-icons/fa";
 import './ShoppingCart.css';
 
-
-
-
 export const ShoppingCart = () => {
 
-  const {cartContext} = useCart()
+  // const {cartContext} = useCart()
 
-    useEffect(() => {
-        const cart = JSON.parse(window.localStorage.getItem("cart"))
-        const cartArr = (cart.map(item => {
-          return item}))
+
+  const cart = JSON.parse(window.localStorage.getItem("cart"))
+  console.log(cart)
+
+    // useEffect(() => {
         
+        // console.log(cart)
+        // const cartArr = (cart.map(item => {
+        //   return item}))
 
-          cartArr.forEach(item => 
-          console.log(item))
+          // console.log(item)
 
-          
-      
-
-},[cartContext]);
+          // cartArr.forEach(item => 
+          // console.log(item))
 
 
+// },[cartContext]);
 
   return (
     <div className="shopping-cart">
       <div className="cart">
           <h2>Your Shopping Cart</h2>
+
+          {cart.map((item) => {
+            return (
             <div className="cart-center">
-            </div>
-            <div className="cart-item">
-              <img  alt=""/>
-              <div>
-                <h1>{cartContext}</h1>
-                <p>price</p> 
+              <div className="cart-item" key={item.id}>
+                <img src={item.url} alt={item.name}/>
+                  <div>
+                    <h1>{item.name}</h1>
+                    <p>{item.price}</p> 
+                  </div>
+                  <div>
+                    <p className='quantity'>{item.quantity}</p>
+                  </div>
+                  <div className='remove-item'>
+                    <FaTrashAlt />
+                  </div>
               </div>
-              <div>
-                <p className='quantity'>l</p>
-              </div>
-              <div className='remove-item'>
-                <FaTrashAlt />
-              </div>
-            </div>
+            </div>)
+          })}
         
           <div className="cart-footer">
             <h3>Total</h3>

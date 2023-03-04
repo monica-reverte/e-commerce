@@ -8,10 +8,12 @@ export const useCart = () => {
 
 function CartContextProvider({children}) {
     const [cartContext, setCartContext] = useState(0);
+    
 
     
 function addToCart (id, counter, name, price, url) {
 
+    
 
     const product = [{
         id:id,
@@ -22,19 +24,23 @@ function addToCart (id, counter, name, price, url) {
 
     }]
 
+    
+
     const items = localStorage.getItem("cart");
     const objectItems = JSON.parse(items);
 
 
     localStorage.setItem("cart", JSON.stringify(objectItems ? [...product, ...objectItems] : product));
 
+    // console.log(product)
+    // console.log(cartContext)
 
 }
 
     const data = {
         cartContext,
         setCartContext,
-        addToCart
+        addToCart,
     }
     return(
         <CartQuantityContext.Provider value={data}>
