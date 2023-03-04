@@ -34,23 +34,44 @@
 
 .cart-center{
     width: 90%;
-    margin: 0 auto;
-    background-color: white;
-    border: 1px solid var(--mainColorLight);
+    display:flex;
+    justify-content:center;
+    
 }
 
+
+.img-item{
+    width: 100%;
+    padding: 10%;
+}
 .cart-item{
     display:grid;
-    grid-template-columns: 1fr 2 fr 1 fr;
+    grid-template-columns: 1fr 2fr 1fr;
     width: 80%;
     margin: 1rem;
     margin-bottom: 0;
     background-color: white;
     border: 1px solid var(--mainColorLight);
     justify-content:center;
+    align-items: center;
 
 }
 
+.item-info{
+    margin-left: 2rem;
+}
+
+.item-title{
+    font-size: 1rem;
+
+}
+
+.remove-item{
+    display:flex;
+    justify-content:center;
+    
+
+}
 .cart-footer{
     display:flex;
     flex-direction:column;

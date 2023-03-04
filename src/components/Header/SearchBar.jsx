@@ -12,7 +12,6 @@ export const SearchBar = () => {
 
     useEffect(() => {
         const cart = JSON.parse(window.localStorage.getItem("cart"))
-        // console.log(cart)
         const cartArr = (cart.map(item => {
             return item.quantity
         }))

@@ -1,28 +1,12 @@
-// import { useCart } from "../../context/cartContext";
 import { FaTrashAlt }  from "react-icons/fa";
 import './ShoppingCart.css';
 
 export const ShoppingCart = () => {
 
-  // const {cartContext} = useCart()
-
-
   const cart = JSON.parse(window.localStorage.getItem("cart"))
   console.log(cart)
 
-    // useEffect(() => {
-        
-        // console.log(cart)
-        // const cartArr = (cart.map(item => {
-        //   return item}))
 
-          // console.log(item)
-
-          // cartArr.forEach(item => 
-          // console.log(item))
-
-
-// },[cartContext]);
 
   return (
     <div className="shopping-cart">
@@ -33,17 +17,17 @@ export const ShoppingCart = () => {
             return (
             <div className="cart-center">
               <div className="cart-item" key={item.id}>
-                <img src={item.url} alt={item.name}/>
-                  <div>
-                    <h1>{item.name}</h1>
-                    <p>{item.price}</p> 
-                  </div>
-                  <div>
-                    <p className='quantity'>{item.quantity}</p>
-                  </div>
-                  <div className='remove-item'>
-                    <FaTrashAlt />
-                  </div>
+                <div className="img-item-container">
+                  <img className ="img-item" src={item.url} alt={item.name}/>
+                </div>
+                <div className="item-info">
+                  <h1 className="item-title">{item.name}</h1>
+                  <p>{item.price}</p>
+                  <p className='quantity'> quantity: {item.quantity}</p>
+                </div>
+                <div className='remove-item'>
+                  <FaTrashAlt />
+                </div>
               </div>
             </div>)
           })}
