@@ -4,11 +4,12 @@ import { Counter } from "./Counter";
 
 
 export const ProductsList = (props) => {
+  
   return (
 
     <>
     
-      <div className='product'>
+      <div className='product' key={props.id}>
         <div className='product_img'>
           <img src={props.url} alt=""/>
         </div>

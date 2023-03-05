@@ -24,6 +24,16 @@ function addToCart (id, counter, name, price, url) {
 
     }]
 
+    if(product.find(item =>item.id === product.id)){
+        const products = product.map(item => 
+            item.id === product.id 
+                ? {...item, quantity: item.quantity + 1 }
+                : item
+        );
+
+        return setCartContext(...products)
+    }
+
     
 
     const items = localStorage.getItem("cart");
@@ -31,6 +41,8 @@ function addToCart (id, counter, name, price, url) {
 
 
     localStorage.setItem("cart", JSON.stringify(objectItems ? [...product, ...objectItems] : product));
+
+    
 
     // console.log(product)
     // console.log(cartContext)
