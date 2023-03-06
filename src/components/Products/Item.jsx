@@ -1,12 +1,9 @@
 import React from 'react'
-import { useCounter } from "./Counter"
+import { Counter } from "./Counter"
 import "./Products.css";
-import "./Counter.css";
 
 
 export const Item = ({name, price, url, id}) => {
-
-    const {counter, increase, decrement} = useCounter(0)
 
     return (
         <div className="products">
@@ -19,12 +16,7 @@ export const Item = ({name, price, url, id}) => {
                     <p>{price}€</p>
                 </div>
                 <div className='product-btn'>
-                    <button className= 'btn-counter' onClick={decrement}>-</button>
-                        <div>{counter}</div>
-                    <button className='btn-counter' onClick={increase}>+</button>
-
-                    <button className='add-cart'>Add to cart</button>
-                    {/* <Counter id={id} name={name} price ={price} url={url} /> */}
+                    <Counter id={id} name={name} price ={price} url={url} />
                 </div>
             </div>
         </div>

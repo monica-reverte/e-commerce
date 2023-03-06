@@ -1,53 +1,55 @@
 import { useState } from "react";
 import "./Counter.css";
 
+import { useCart } from '../../context/cartContext';
 
 
-export const useCounter = (initialValue = 0) => {
+
+export const Counter = ({ initialValue = 0 , id, name, price, url}) => {
+
     const [counter, setCounter] = useState(initialValue);
+    const {setCartContext, addToCart} = useCart();
+    
 
-    const increase = () => setCounter(counter + 1)
-    const decrement = () => {if (counter === 0) return initialValue;
+    const increaseValue = () => {
+    setCounter((prevState) => prevState + 1);
+    
+};
+
+    const substractValue = () => {
+        if (counter === 0) return initialValue;
         setCounter((prevState) => prevState - 1);
     };
 
-    return {
-        counter,
-        increase,
-        decrement
-    }
-
-}
-
-// export const Counter = ({ initialValue = 0 , name, price, url, id}) => {
-
     
-//     const {setCartContext, addToCart} = useCart();
-    
-
-    
-    // const add = () => {
-    //     addToCart(id, counter, name, price, url)
-    //     setCounter(0);
-    //     setCartContext(prevState => prevState + 1)
+    const add = () => {
+        addToCart(id, counter, name, price, url)
+        setCounter(0);
+        setCartContext(prevState => prevState + 1)
         
-    // }
+    }
     
-    // setCartContext((currentItems) => {
-    //     const itemFound = currentItems.find((item) => item.id === id);
-    //     if(itemFound){
-    //         return currentItems.map((item) => {
-    //             if(item.id === id){
-    //                 return {...item, quantity: counter + 1}
-    //             }
-    //         })
-    //     } else {
-    //     return [...currentItems, {id, quantity: counter}]
-    //     }
-    // })
     
 
 
+    return (
+    <>
+        <button
+        className= 'btn-counter'
+        onClick={substractValue}
+        >
+        -
+        </button>
+        <div>{counter}</div>
+        <button className='btn-counter' onClick={increaseValue}>
+        +
+        </button>
+
+        <button className='add-cart' onClick={add}>Add to cart</button>
+        
+    </>
+    );
+};
 
 
 

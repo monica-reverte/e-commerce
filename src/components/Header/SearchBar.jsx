@@ -11,7 +11,7 @@ export const SearchBar = () => {
     const {cartContext, setCartContext} = useCart()
 
     useEffect(() => {
-        const cart = JSON.parse(window.localStorage.getItem("cart"))
+        const cart = JSON.parse(window.localStorage.getItem("cart")) || []
         const cartArr = (cart.map(item => {
             return item.quantity
         }))

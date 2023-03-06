@@ -21,22 +21,24 @@ function addToCart (id, counter, name, price, url,) {
         url:url
     }]
 
+    
 
     
 
     const items = localStorage.getItem("cart");
-    const objectItems = JSON.parse(items);
+    const objectItems = JSON.parse(items) || [];
+
+    const isInCart = objectItems.find(item => item.id === id)
+    if(isInCart){
+        const productToCart = objectItems.map (item => item.id === id ? {...item, quantity : item.quantity + counter } : item)
+        return localStorage.setItem("cart", JSON.stringify([...productToCart]));
+
+    }
 
 
 
     localStorage.setItem("cart", JSON.stringify(objectItems ? [...product, ...objectItems] : product));
 
-    
-
-    
-
-    // console.log(product)
-    // console.log(cartContext)
 
 }
 
