@@ -30,7 +30,9 @@ export const SearchBar = () => {
 return (
     <div className='searchbar_nav'>
         <div className='div_logo'>
+            <Link to ={'/'}>
             <img className='logo'src={logo} alt="logo"/> 
+            </Link>
         </div>
         <div className='search'>
             <FaSearch />

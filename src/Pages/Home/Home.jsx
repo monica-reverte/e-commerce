@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header, SearchBar, NavBar, Banner } from "../../components/Header";
-import { Products } from "../../data/Products";
+import { Item, ProductsList } from "../../components/Products";
 import { Footer } from "../../components/Footer/Footer";
 
 export function Home() {
@@ -11,7 +11,8 @@ export function Home() {
         <SearchBar />
         <NavBar />
         <Banner />
-        <Products />
+        <ProductsList />
+        <Item />
         <Footer />
     </div>
     

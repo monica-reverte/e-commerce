@@ -1,5 +1,3 @@
-
-import { useCart } from "../../context/cartContext"
 import { FaTrashAlt }  from "react-icons/fa";
 import './ShoppingCart.css';
 
@@ -7,14 +5,7 @@ export const ShoppingCart = () => {
 
   
   const cart = JSON.parse(window.localStorage.getItem("cart"))
-  const {cartContext, setCartContext} = useCart()
 
-
-  const removeProduct = (item) => {
-
-  const results = cart.filter(prod => prod.id !== item.id);
-  
-}
     
 
 
@@ -36,7 +27,7 @@ export const ShoppingCart = () => {
                   <p>{item.price}</p>
                   <p className='quantity'> quantity: {item.quantity}</p>
                 </div>
-                <div className='remove-item' onClick={() => removeProduct(item)}>
+                <div className='remove-item'>
                   <FaTrashAlt />
                 </div>
               </div>
