@@ -1,55 +1,41 @@
+
+import { useCart } from "../../context/cartContext";
 import { useState } from "react";
 import "./Counter.css";
 
-import { useCart } from '../../context/cartContext';
+export const Counter = ({ initialValue = 0, product }) => {
+  const [counter, setCounter] = useState(initialValue);
+  const { addToCart } = useCart();
 
 
-
-export const Counter = ({ initialValue = 0 , id, name, price, url}) => {
-
-    const [counter, setCounter] = useState(initialValue);
-    const {setCartContext, addToCart} = useCart();
-    
-
-    const increaseValue = () => {
+  const increaseValue = () => {
     setCounter((prevState) => prevState + 1);
-    
-};
+  };
 
-    const substractValue = () => {
-        if (counter === 0) return initialValue;
-        setCounter((prevState) => prevState - 1);
-    };
+  const substractValue = () => {
+    if (counter === 0) return initialValue;
+    setCounter((prevState) => prevState - 1);
+  };
 
-    
-    const add = () => {
-        addToCart(id, counter, name, price, url)
-        setCounter(0);
-        setCartContext(prevState => prevState + 1)
-        
-    }
-    
-    
+  const add = () => {
+    addToCart(counter, product);
+    setCounter(0);
+   
+  };
 
-
-    return (
+  return (
     <>
-        <button
-        className= 'btn-counter'
-        onClick={substractValue}
-        >
+      <button className="btn-counter" onClick={substractValue}>
         -
-        </button>
-        <div>{counter}</div>
-        <button className='btn-counter' onClick={increaseValue}>
+      </button>
+      <div>{counter}</div>
+      <button className="btn-counter" onClick={increaseValue}>
         +
-        </button>
+      </button>
 
-        <button className='add-cart' onClick={add}>Add to cart</button>
-        
+      <button className="add-cart" onClick={add}>
+        Add to cart
+      </button>
     </>
-    );
+  );
 };
-
-
-

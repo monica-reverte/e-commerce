@@ -1,50 +1,44 @@
-import { useEffect } from 'react';
-import { useCart } from '../../context/cartContext';
-import logo from '../../assets/logo/logo.jpg';
+import { useCart } from "../../context/cartContext";
+import logo from "../../assets/logo/logo.jpg";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
-import './SearchBar.css';
-import { Link } from 'react-router-dom';
+import "./SearchBar.css";
+import { Link , useSearchParams } from "react-router-dom";
 
 
 export const SearchBar = () => {
 
-    const {cartContext, setCartContext} = useCart()
+  const [searchParams, setSearchParams] = useSearchParams();
 
-    useEffect(() => {
-        const cart = JSON.parse(window.localStorage.getItem("cart")) || []
-        const cartArr = (cart.map(item => {
-            return item.quantity
-        }))
+  const query = searchParams.get('q') ?? ""
 
-    let total = 0;
+  const handleInput =({target}) => {
+    const {value} =  target
+    setSearchParams({q : value})
+    
+  }
+  const { cartContext } = useCart();
+  const total = cartContext.reduce((acc, curr) => {
+    return acc + curr.quantity;
+    
+  },0);
 
-    cartArr.forEach(item =>
-        total += item)
-
-    setCartContext(total);
-        
-
-},[cartContext]);
-
-
-return (
-    <div className='searchbar_nav'>
-        <div className='div_logo'>
-            <Link to ={'/'}>
-            <img className='logo'src={logo} alt="logo"/> 
-            </Link>
-        </div>
-        <div className='search'>
-            <FaSearch />
-            <input type="search" />
-        </div>
-        <div className='div_cart'>
-            <Link to={'/cart'} className="cart-btn">
-            <FaShoppingCart />
-                <span className='item_total'>{cartContext}</span>    
-            </Link>
-            
-        </div>     
+  return (
+    <div className="searchbar_nav">
+      <div className="div_logo">
+        <Link to={"/"}>
+          <img className="logo" src={logo} alt="logo" />
+        </Link>
+      </div>
+      <div className="search">
+        <FaSearch />
+        <input type="search" value={query} name="filter" placeholder="Search" onChange={handleInput} />
+      </div>
+      <div className="div_cart">
+        <Link to={"/cart"} className="cart-btn">
+          <FaShoppingCart />
+          <span className="item_total">{total}</span>
+        </Link>
+      </div>
     </div>
-    )
-}
+  );
+};
