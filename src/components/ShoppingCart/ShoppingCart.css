@@ -66,6 +66,11 @@
 
 }
 
+.price{
+    font-size:0.9rem;
+    margin: 1rem 2rem;
+}
+
 .remove-item{
     display:flex;
     justify-content:center;
@@ -81,6 +86,21 @@
     margin: 1rem;
     align-items:center;
 }
+
+.div-quantity{
+    display:flex;
+    flex-direction:row;
+    margin:1rem;
+}
+
+.quantity{
+    font-size: 0.9rem;
+
+}
+.plus-minus-icon{
+    width: 0.9rem;
+}
+
 
 .button-pay{
     width: 20%;

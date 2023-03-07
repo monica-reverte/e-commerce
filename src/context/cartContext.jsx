@@ -17,8 +17,6 @@ function CartContextProvider({ children }) {
 
   function addToCart(counter, product) {
 
-    console.log(counter)
-
     const isInCart = cartContext.find(item => item.id === product.id)
     
     if(isInCart){
@@ -30,8 +28,6 @@ function CartContextProvider({ children }) {
     }
   }
 
-
-  
 
   const data = {
     cartContext,
