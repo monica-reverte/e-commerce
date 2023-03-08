@@ -3,6 +3,7 @@ import logo from "../../assets/logo/logo.jpg";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import "./SearchBar.css";
 import { Link , useSearchParams } from "react-router-dom";
+import { LOGIN } from '../../config/routes/paths';
 
 
 export const SearchBar = () => {
@@ -34,7 +35,7 @@ export const SearchBar = () => {
         <input type="search" value={query} name="filter" placeholder="Search" onChange={handleInput} />
       </div>
       <div className="div_cart">
-        <Link to={"/cart"} className="cart-btn">
+        <Link to={LOGIN} className="cart-btn">
           <FaShoppingCart />
           <span className="item_total">{total}</span>
         </Link>

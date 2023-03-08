@@ -1,6 +1,8 @@
 import { FaTrashAlt, FaMinusCircle, FaPlusCircle }  from "react-icons/fa";
 import { useCart } from "../../context/cartContext";
 import './ShoppingCart.css';
+import { LOGOUT } from '../../config/routes/paths'
+import { Link } from "react-router-dom";
 
 
 export const ShoppingCart = () => {
@@ -83,6 +85,9 @@ export const ShoppingCart = () => {
           
         
 
+          </div>
+          <div>
+            <Link to={LOGOUT}>Logout</Link>
           </div>
       </div>
     
