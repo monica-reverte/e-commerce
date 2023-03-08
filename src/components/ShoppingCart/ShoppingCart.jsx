@@ -67,8 +67,11 @@ export const ShoppingCart = () => {
                   <FaTrashAlt />
                 </div>
               </div>
-            </div>)
+              
+            </div> 
+            )
           })}
+          
         
           <div className="cart-footer">
             <h3>Total</h3>
