@@ -4,9 +4,11 @@ import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import "./SearchBar.css";
 import { Link , useSearchParams } from "react-router-dom";
 import { LOGIN } from '../../config/routes/paths';
+import { WishIcon } from "./WishIcon";
 
 
 export const SearchBar = () => {
+
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -35,6 +37,7 @@ export const SearchBar = () => {
         <input type="search" value={query} name="filter" placeholder="Search" onChange={handleInput} />
       </div>
       <div className="div_cart">
+        <WishIcon />
         <Link to={LOGIN} className="cart-btn">
           <FaShoppingCart />
           <span className="item_total">{total}</span>

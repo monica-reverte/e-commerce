@@ -7,35 +7,52 @@
 
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* End Global rules */
+
+/* Start body rules */
+body {
+background-image: linear-gradient(-225deg, white 0%, #E3FDF5 100%);
+/* background-image: linear-gradient(to top, #a8edea 0%, #74a580 100%); */
+background-attachment: fixed;
+background-repeat: no-repeat;
+}
+
+
 .shopping-cart{
-    display:flex;
-    justify-content:center;
-    width:100%;
-    height:100%;
-    margin: 2rem;
-    color: var(--textColor);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
 }
 
 .cart{
-    display:flex;
-    flex-direction:column;
-    width: 60%;
-    height: 60%;
-    background-color: var(--mainColor);
-    margin:2rem;
-    align-items: center;
+    width: 450px;
+    min-height: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin: 2% auto;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-image: linear-gradient(-225deg, #c0e1c8 50%, #fce6ef 50%);
 }
 
 .cart h2{
+    margin: 2% auto 10% auto;
     text-align: center;
-    font-size: 2rem;
+    font-size: 250%;
+    color: #3e403f;
 }
 
 
 .cart-center{
-    width: 90%;
-    display:flex;
-    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    
     
 }
 
@@ -54,6 +71,12 @@
     border: 1px solid var(--mainColorLight);
     justify-content:center;
     align-items: center;
+    color: var(--textColor);
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    
+    
 
 }
 
@@ -78,13 +101,17 @@
 
 }
 .cart-footer{
-    display:flex;
-    flex-direction:column;
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 0;
     background-color: white;
-    border: 1px solid var(--mainColorLight);
-    margin: 1rem;
-    align-items:center;
+    justify-content:center;
+    align-items: center;
+    color: var(--textColor);
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
 }
 
 .div-quantity{

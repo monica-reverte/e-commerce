@@ -1,5 +1,9 @@
+import { Header, NavBar } from "../components/Header";
+import { Footer } from "../components/Footer/Footer";
 import { useAuthContext } from "../context/authContext";
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import { FaUser, FaKey } from "react-icons/fa";
+import "../components/login.css";
 
 
 export function Login() {
@@ -37,15 +41,31 @@ export function Login() {
         
     }
 
-    return ( <div>
-        <h1>Login</h1>
-        <form  onSubmit={handleSubmit}>
-            <label>User:</label>
-            <input type="text" value={form.user} name="user" onChange={handleInputChange} />
-            <label>Password:</label>
-            <input type="password" value={form.password} name="password" onChange={handleInputChange} />
-            <button type="submit">Log In</button>
+    return ( 
+    <div>
+        <Header />
+        <NavBar />
+        <div className="overlay">
+            <form  onSubmit={handleSubmit}>
+                <div className="con">
+                        <h2 className="head-form">Log In</h2>
+                <div className="field-set">
+                    <span className="input-item">
+                        <FaUser className="fa fa-user-circle" />
+                    </span>
+                    <input className="form-input" type="text" value={form.user} name="user" onChange={handleInputChange} placeholder="UserName" required />
+                    <span className="input-item">
+                        <FaKey className="fa fa-key" />
+                    </span>
+                    <input className="form-input" type="password" placeholder="Password" value={form.password} name="password" onChange={handleInputChange} required />
+                        <button className="log-in"> Log In </button>
+                </div>
+            </div>
         </form>
-        </div>
+    </div>
+        <Footer />
+    </div>
     );
 }
+
+

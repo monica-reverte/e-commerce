@@ -30,13 +30,13 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
-    box-shadow: 1px 10px 10px 2px var(--mainColor);
-    border: 0.1rem solid var(--mainColor);
-    border-radius: 5px;
+    border: 0.1rem solid var(--otherColor);
+    border-radius: 0.5rem;
+    background-color: white;
 }
 
 .product_img img{
-    width: 15rem;
+    width: 12rem;
 }
 
 .product_info{
@@ -45,7 +45,7 @@
 
 .product_info h1{
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color:var(--textColor);
     text-align: center;
     
@@ -54,7 +54,7 @@
 .product_info p{
     font-weight:bold;
     color:var(--otherColor);
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
 }
 
