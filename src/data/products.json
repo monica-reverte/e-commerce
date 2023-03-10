@@ -5,74 +5,133 @@
         "name": "Vertical abacus with wooden numbers",
         "price": 26.75,
         "url": "https://montessoriparatodos.es/18044-large_default/abaco-vertical-con-numeros-en-madera.jpg",
-        "id": 1
+        "id": 1,
+        "type": "educational"
     },
     {
         "name": "Base 10 Decimal System Re-wood",
         "price": 21.00,
         "url": "https://montessoriparatodos.es/15350-thickbox_default/base-10-sistema-decimal-re-wood.jpg",
-        "id": 2
+        "id": 2,
+        "type": "educational"
     },
     {
         "name": "Box with cylinders of primary colors",
         "price": 23.85,
         "url": "https://montessoriparatodos.es/18564-thickbox_default/caja-con-cilindros-de-colores-primarios.jpg",
-        "id": 3
+        "id": 3,
+        "type": "educational"
     },
     {
         "name": "Montessori Calendar",
         "price": 27.00,
         "url": "https://montessoriparatodos.es/18337-large_default/calendario-montessori.jpg",
-        "id": 4
+        "id": 4,
+        "type": "educational"
     },
     {
         "name": "Basket of treasures",
         "price": 50.50,
         "url": "https://montessoriparatodos.es/14094-thickbox_default/cesta-de-tesoros.jpg",
-        "id": 5
+        "id": 5,
+        "type": "toys"
     },
     {
         "name": "Montessori Ball",
         "price": 17.49,
         "url": "https://montessoriparatodos.es/11315-thickbox_default/pelota-montessori.jpg",
-        "id": 6
+        "id": 6,
+        "type": "toys"
     },
     {
         "name": "Montessori botanical puzzle 18 sheets",
         "price": 35.00,
         "url": "https://montessoriparatodos.es/18340-thickbox_default/puzzle-18-hojas-botanica-montessori.jpg",       
-        "id": 7
+        "id": 7,
+        "type": "educational"
     },
     {
-        "name": "Montessori Grammar Solids Premium",
+        "name": "Rainbow",
         "price": 36.00,
-        "url": "https://montessoriparatodos.es/15901-thickbox_default/solidos-gramaticales-montessori-premium.jpg",
-        "id": 8
+        "url": "https://montessoriparatodos.es/9242-thickbox_default/arcoiris-grimms-grande-regalo.jpg",
+        "id": 8,
+        "type": "toys"
     },
     {
-        "name": "Multifunctional rattle",
-        "price": "8,42",
+        "name": "Rattlesnake rattle",
+        "price": 8.42,
         "url": "https://montessoriparatodos.es/16233-thickbox_default/sonajero-cascabel-multifuncional.jpg",
-        "id": 9
+        "id": 9,
+        "type": "toys"
     },
     {
         "name": "Colorful rolling drum",
         "price": "28,50",
         "url": "https://montessoriparatodos.es/18762-thickbox_default/tambor-rodante-de-colores.jpg",
-        "id": 10
+        "id": 10,
+        "type": "toys"
     },
     {
         "name": "Permanence box with tray",
         "price": 14.80,
         "url": "https://montessoriparatodos.es/12107-thickbox_default/caja-de-permanencia-con-bandeja.jpg",
-        "id": 11
+        "id": 11,
+        "type": "toys"
     },
     {
         "name": "Table of Symmetry and Cards",
         "price": 14.00,
         "url": "https://montessoriparatodos.es/6688-thickbox_default/tabla-de-simetrias-y-tarjetas.jpg",
-        "id": 12
+        "id": 12,
+        "type": "educational"
+    },
+    {
+        "name": "Colors and textures",
+        "price": 13.78,
+        "url": "https://montessoriparatodos.es/1478-thickbox_default/colores-libro-de-tela-y-texturas.jpg",
+        "id": 13,
+        "type": "book"
+    },
+
+    {
+        "name": "My first photo album",
+        "price": 23.10,
+        "url": "https://montessoriparatodos.es/9237-thickbox_default/mi-primer-album-de-fotos-haba.jpg",
+        "id": 14,
+        "type": "book"
+        
+    },
+    {
+        "name": "My first photo album",
+        "price": 7.55,
+        "url": "https://montessoriparatodos.es/15492-thickbox_default/baby-montessori-formas-blanco-negro-y-rojo.jpg",
+        "id": 15,
+        "type": "book"
+    },
+    {
+        "name": "Learning Tower - STEP'n'SIT",
+        "price": 147.55,
+        "url": "https://montessoriparatodos.es/17264-thickbox_default/torre-de-aprendizaje-step-n-sit.jpg",
+        "id": 17,
+        "type": "furniture"
+    },
+    {
+        "name": "Pikler Triangle + Ramp",
+        "price": 199.50,
+        "url": "https://montessoriparatodos.es/17579-thickbox_default/triangulo-pikler-rampa.jpg",
+        "id": 16,
+        "type": "furniture"
+    },
+    {
+        "name": "Montessori mirror with bar",
+        "price": 135.85,
+        "url": "https://montessoriparatodos.es/17340-thickbox_default/espejo-montessori-con-barra.jpg",
+        "id": 18,
+        "type": "furniture"
     }
+
+
+
 
 
 ],

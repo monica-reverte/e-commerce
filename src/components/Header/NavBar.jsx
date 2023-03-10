@@ -3,7 +3,8 @@ import { useRef } from "react";
 import { FaBars, FaHome, FaTimes } from "react-icons/fa";
 import './NavBar.css';
 import { Link } from 'react-router-dom';
-import { HOME } from '../../config/routes/paths';
+import { HOME, EDUCATIONAL, FURNITURE, TOYS, BOOKS } from '../../config/routes/paths';
+
 
 export const NavBar = () => {
 
@@ -13,16 +14,16 @@ export const NavBar = () => {
     }
     return (
     <header className='navBar'>
-        <nav ref={navRef}>
+            <nav ref={navRef}>
                 <Link to={HOME}><FaHome /></Link>
-                <a href="/#">Montessori Material</a>
-                <a href="/#">Educational</a>
-                <a href="/#">Toys</a>
-                <a href="/#">Books</a>
+                <Link to={FURNITURE}>Montessori Furniture</Link>
+                <Link to={EDUCATIONAL}>Educational</Link>
+                <Link to={TOYS}>Toys</Link>
+                <Link to={BOOKS}>Books</Link>
             <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                 <FaTimes />
             </button>
-        </nav>
+        </nav> 
             <button className="nav-btn" onClick={showNavbar}>
                 <FaBars />
             </button>

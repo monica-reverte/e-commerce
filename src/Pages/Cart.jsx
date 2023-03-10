@@ -7,6 +7,7 @@ import { ShoppingCart } from '../components/ShoppingCart/ShoppingCart';
 export const Cart = () => {
 
 
+
     
     return (
     <div>

@@ -7,7 +7,7 @@ div .banner{
 }
 
 .banner_img{
-    width: 80%;
+    width: 60%;
     opacity: 80%;
 }
 
@@ -23,7 +23,7 @@ div .banner{
     }
     
     .banner_img{
-        width: 80rem;
+        width:60%;
         opacity: 80%;
     }
 }
