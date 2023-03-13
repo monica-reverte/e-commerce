@@ -15,8 +15,6 @@ import { PrivateRoute } from './components/Router/PrivateRoute';
 
 
 
-
-
 function App() {
 
   return (
@@ -31,9 +29,9 @@ function App() {
                 <Route path={FURNITURE} element={<Furniture/>} />
                 <Route path={TOYS} element={<Toys />} />
                 <Route path={BOOKS} element={<Books />} />
-              </Route>
-              <Route path={PRIVATE} element={<PrivateRoute />}>
-                <Route index element={<Cart />} />
+              </ Route> 
+              <Route element={<PrivateRoute />}>
+                <Route path={PRIVATE} element={<Cart />} />
                 <Route path={LOGOUT} element={<Logout />} />
               </Route>
             </Routes>  

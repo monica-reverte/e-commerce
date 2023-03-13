@@ -37,7 +37,6 @@ export const SearchBar = () => {
         <input type="search" value={query} name="filter" placeholder="Search" onChange={handleInput} />
       </div>
       <div className="div_cart">
-       
         <Link to={LOGIN} className="cart-btn">
           <FaShoppingCart />
           <span className="item_total">{total}</span>
