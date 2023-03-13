@@ -24,6 +24,17 @@ To see your shopping cart you must do login.
     - username: monica
     - password: 1234
 
+### `hooks`
+
+To do this project I used:
+
+    -useState
+    -useEffect
+    -useContext
+    -useSearchParams
+    -useMemo
+    -useCallback
+    -custom hook
 
 ### `screenshots`
 
