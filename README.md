@@ -30,7 +30,7 @@ To see your shopping cart you must do login.
     -Home Page
 
 <img src="./src/assets/img/HomePage1.jpg" alt="homepage">
-<img src="./src/assets/img/HomePage1.jpg" alt="homepage">
+<img src="./src/assets/img/HomePage2.jpg" alt="homepage">
 
     -Login
 
