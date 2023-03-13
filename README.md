@@ -18,3 +18,29 @@ You may also see any lint errors in the console.
 
 I made a fake-api with JSON document and to see this products you need to run the fake-api.
 
+### `login`
+
+To see your shopping cart you must do login.
+    - username: monica
+    - password: 1234
+
+
+### `screenshots`
+
+    -Home Page
+
+<img src="./src/assets/img/HomePage1.jpg" alt="homepage">
+<img src="./src/assets/img/HomePage1.jpg" alt="homepage">
+
+    -Login
+
+<img src="./src/assets/img/login.jpg" alt="login">
+
+    -Shopping Cart
+
+<img src="./src/assets/img/cart.jpg" alt="cart">
+
+
+
+
+

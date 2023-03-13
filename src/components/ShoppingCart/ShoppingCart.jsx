@@ -87,6 +87,7 @@ export const ShoppingCart = () => {
 
           </div>
           <div>
+            
             <Link to={LOGOUT}>Logout</Link>
           </div>
       </div>
